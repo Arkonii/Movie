@@ -1,0 +1,61 @@
+.movieContainer {
+    flex: 1;
+    height: 16rem;
+    display: flex;
+    border: 0.0625rem solid #ddd;
+    border-radius: 1.25rem;
+}
+
+.movieViewContainer {
+    width: 20%;
+    aspect-ratio: 2/1;
+    flex-direction: row;
+    display: flex;
+    border: black solid 2px;
+    gap: 1rem;
+    border-radius: 1.25rem;
+}
+
+.moviesContainer {
+    width: 33%;
+    display: flex;
+    padding: 0.5rem;
+}
+
+.movie {
+    flex-grow: 1;
+    cursor: pointer;
+    position: relative;
+    border: 0.0625rem solid #ddd;
+    border-radius: 1.25rem;
+    width: 100%;
+}
+
+.movieView {
+    width: 40%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 1.25rem;
+}
+
+.flex1 {
+    position: relative;
+    flex: 1;
+}
+
+.movieTitle {
+    width: 100%;
+    font-size: 2rem;
+    height: 20%;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.movieDesc {
+    width: 100%;
+    padding-top: 1rem;
+    height: 70%;
+    font-size: 1.5rem;
+    flex: 1;
+    justify-content: flex-start;
+}

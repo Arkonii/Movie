@@ -1,0 +1,19 @@
+.footer {
+    font-weight: 700;
+    font-size: 1rem;
+    height: 3rem;
+    background-color: #9d2e2e;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.flex1 {
+    position: relative;
+    flex: 1;
+}
+
+.footerText {
+    align-self: flex-end;
+}
