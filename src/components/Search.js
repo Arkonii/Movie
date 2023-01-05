@@ -5,7 +5,7 @@ const Search = (props) => {
     const [state, setState] = useState('')
 
     return (
-        <div className="flex1">
+        <div>
             <form>
                 <input onChange type="text" placeholder="Szukaj..." name="search"/>
             </form>

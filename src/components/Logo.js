@@ -1,14 +1,12 @@
 import React from 'react';
-import '../App.css';
-import {useNavigate} from "react-router-dom";
+import './Logo.css';
+import {Link} from "react-router-dom";
 
 
 const Logo = () => {
 
     return (
-        <div>
-            <p className={'homeText'}>LOGO</p>
-        </div>
+            <Link className='homeText' to="/">LO GO</Link>
     );
 };
 
