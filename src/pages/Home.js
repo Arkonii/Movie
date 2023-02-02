@@ -1,49 +1,16 @@
 import Movie from "../components/Movie";
+import {useEffect, useState} from "react";
+import {getMovies} from "../api/controller";
 
-const movies = [
-    {
-        title: "(opis)",
-        desc: "(ocena)",
-        imageSrc: "../tit2.jpg"
-    },
-    {
-        title: "(opis)",
-        desc: "(ocena)",
-        imageSrc: "../tit2.jpg"
-    },
-    {
-        title: "(opis)",
-        desc: "(ocena)",
-        imageSrc: "../tit2.jpg"
-    },
-    {
-        title: "(opis)",
-        desc: "(ocena)",
-        image: "../tit2.jpg"
-    },
-    {
-        title: "(opis)",
-        desc: "(ocena)",
-        imageSrc: "../tit2.jpg"
-    },
-    {
-        title: "(opis)",
-        desc: "(ocena)",
-        image: "../tit2.jpg"
-    },
-    {
-        title: "(opis)",
-        desc: "(ocena)",
-        imageSrc: "../tit2.jpg"
-    },
-    {
-        title: "(opis)",
-        desc: "(ocena)",
-        image: "../tit2.jpg"
-    },
-]
+
 
 const Home = () => {
+    const [movies, setMovies] = useState([]);
+    useEffect(() => {
+        //setMovies(getMovies())
+        getMovies().
+            then(data=>setMovies(data.data));
+    }, [])
     return (
         <div className="App">
             <div style={{
@@ -56,7 +23,7 @@ const Home = () => {
                 flexWrap: "wrap"
             }}>
                 {
-                    movies.map(movie =>
+                    movies?.map(movie =>
                         <Movie movie={movie}/>
                     )
                 }

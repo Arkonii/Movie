@@ -1,14 +1,18 @@
 import './Movie.css'
+import {Link} from "react-router-dom";
 
 const Movie = ({movie}) => {
+
     return (
-        <div className={'movieViewContainer'}>
-            <img src={require('../tit2.jpg')} className='movieView' alt='nie dzialam' />
-            <div className={'flex1'}>
-                <p className={'movieTitle'}>{movie.title}</p>
-                <p className={'movieDesc'}>{movie.desc}</p>
-            </div>
-        </div>
+        <Link to = {`details/${movie.id}`} className={'movieViewContainer'}>
+
+                <img src={movie.image} className='movieView' alt='nie dzialam' />
+                <div className={'flex1'}>
+                    <p className={'movieTitle'}>{movie.title}</p>
+                    <p className={'movieDesc'}>{movie.desc}</p>
+                </div>
+
+        </Link>
     )
 }
 
